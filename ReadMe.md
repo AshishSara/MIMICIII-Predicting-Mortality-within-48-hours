@@ -18,7 +18,6 @@ feature matrices.
 
 **Cohort Numbers and Dimensionalities of Extracted Features are Summarised Below:**
 
-
 - Number of Instances (N): 8,577 ICU stays.
 
 - Number of Time-Invariant Features (d): 96.
