@@ -1,17 +1,14 @@
-This project aims to predict whether a patient will experience mortality (death) within 48 hours of their hospital admission 
-or at some point during their ICU stay, based on the data available in their electronic health records up to that time. 
-This project uses the preprocessed data obtained from applying the FIDDLE protocol (1). Please see the reference section for the citation
-and a link to the description of the protocol. I have provided a brief summary of the preprocessed data below, but to confirm, 
-the preprocessed data strategy is directly from the FIDDLE protocol and I claim no credit for the preprocessing strategy (1). 
+This project aims to predict whether a patient will experience mortality (death) within 48 hours of their hospital admission or at some point during their ICU stay, based on the data available in their electronic health records (EHR) up to that time. The original EHR data used for this project is from MIMIC-III (linked below in the reference list) (1). This project uses the preprocessed data obtained from applying the FIDDLE protocol (2). Please see the reference section for the citation and a link to the description of the protocol. I have provided a brief summary of the preprocessed data below, but to confirm, the preprocessed data strategy is directly from the FIDDLE protocol and I claim no credit for the preprocessing strategy (2). 
 
-Data: The protocol obtained data from MIMIC-III dataset and focused on 17,710 patients (23,620 ICU visits) monitored 
+Data: The protocol obtained data from MIMIC-III (1) dataset and focused on 17,710 patients (23,620 ICU visits) monitored 
 using the iMDSoft MetaVision system (2008–2012) for its relative recency over the Philips CareVue system (2001–2008), 
-thus representing more up-to-date clinical practices (1). Each ICU visit is identified by a unique ICUSTAY_ID (1).
+thus representing more up-to-date clinical practices (2). Each ICU visit is identified by a unique ICUSTAY_ID (2).
 
 
-**Extracted data from the following tables provided from the MIMIC III datset (1):**
+**Extracted data from the following tables provided from the MIMIC III datset (1,2):**
 
 PATIENTS, ADMISSIONS, ICUSTAYS, CHARTEVENTS, LABEVENTS, INPUTEVENTS_MV, OUTPUTEVENTS, PROCEDUREEVENT_MV, MICROBIOLOGYEVENTS, DATETIMEEVENTS
+
 
 **Preprocessing (1):**
 The data was then formatted into a table with 4 columns: [ID, t, variable_name, variable_value] and then applied FIDDLE 
@@ -52,4 +49,14 @@ Use in Clinical Settings: Such models, if deployed in clinical settings, can ass
  https://academic.oup.com/jamia/article/27/12/1921/5920826
 **FIDDLE Preprocessed Data Source:**
 https://physionet.org/content/mimic-eicu-fiddle-feature/1.0.0/
+
+(2) **MIMIC-III original publication:**
+Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. Scientific Data, 3, 160035.
+**MIMIC-III Database:**
+Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. https://doi.org/10.13026/C2XW26.
+
+
+**Standard Physionet Citation**
+Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.
+
 
