@@ -44,16 +44,18 @@ Use in Clinical Settings: Such models, if deployed in clinical settings, can ass
 
 
 **Reference:**
+
 (1) **MIMIC-III original publication:**
 Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. Scientific Data, 3, 160035.
+
 **MIMIC-III Database:**
 Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. https://doi.org/10.13026/C2XW26.
 
 (2)**FIDDLE Publication Source:**
  https://academic.oup.com/jamia/article/27/12/1921/5920826
+ 
 **FIDDLE Preprocessed Data Source:**
 https://physionet.org/content/mimic-eicu-fiddle-feature/1.0.0/
-
 
 **Standard Physionet Citation**
 Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220.
