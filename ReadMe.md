@@ -45,14 +45,14 @@ Use in Clinical Settings: Such models, if deployed in clinical settings, can ass
 
 **Reference:**
 
-(1) **MIMIC-III original publication:**
+(1) **MIMIC-III Publication Citation:**
 Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. Scientific Data, 3, 160035.
 
-**MIMIC-III Database:**
+**MIMIC-III Database Source:**
 Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. https://doi.org/10.13026/C2XW26.
 
-(2)**FIDDLE Publication Source:**
- https://academic.oup.com/jamia/article/27/12/1921/5920826
+(2)**FIDDLE Publication Citation:**
+Shengpu Tang, Parmida Davarmanesh, Yanmeng Song, Danai Koutra, Michael W Sjoding, Jenna Wiens, Democratizing EHR analyses with FIDDLE: a flexible data-driven preprocessing pipeline for structured clinical data, Journal of the American Medical Informatics Association, Volume 27, Issue 12, December 2020, Pages 1921–1934, https://doi.org/10.1093/jamia/ocaa139
  
 **FIDDLE Preprocessed Data Source:**
 https://physionet.org/content/mimic-eicu-fiddle-feature/1.0.0/
