@@ -10,13 +10,13 @@ thus representing more up-to-date clinical practices (2). Each ICU visit is iden
 PATIENTS, ADMISSIONS, ICUSTAYS, CHARTEVENTS, LABEVENTS, INPUTEVENTS_MV, OUTPUTEVENTS, PROCEDUREEVENT_MV, MICROBIOLOGYEVENTS, DATETIMEEVENTS
 
 
-**Preprocessing (1):**
+**Preprocessing (2):**
 The data was then formatted into a table with 4 columns: [ID, t, variable_name, variable_value] and then applied FIDDLE 
 (using the default settings) on the processed data tables for the prediction tasks to convert them into the required 
 feature matrices.
 
 
-**Cohort Numbers and Dimensionalities of Extracted Features are Summairzed Below:**
+**Cohort Numbers and Dimensionalities of Extracted Features are Summarised Below:**
 
 
 - Number of Instances (N): 8,577 ICU stays.
@@ -37,7 +37,7 @@ Clinical Significance: This prediction is crucial in a healthcare setting as it 
 high risk and might require more intensive care or intervention.
 
 Implications:
-Model Performance: In this context, it's particularly important to focus not just on overall accuracy but also on the model's ability to correctly identify the high-risk patients (Class 1). This is why metrics like recall, precision, ROC AUC, and F1-score for the mortality class are essential.
+Model Performance: In this context, it's particularly important to focus not just on overall accuracy but also on the model's ability to correctly identify high-risk patients (Class 1). This is why metrics like recall, precision, ROC AUC, and F1-score for the mortality class are essential.
 
 Model Interpretation: The feature importance analysis from these models can provide insights into which factors are most predictive of near-term mortality, helping clinicians understand key risk factors.
 
@@ -45,15 +45,15 @@ Use in Clinical Settings: Such models, if deployed in clinical settings, can ass
 
 
 **Reference:**
-(1)**FIDDLE Publication Source:**
- https://academic.oup.com/jamia/article/27/12/1921/5920826
-**FIDDLE Preprocessed Data Source:**
-https://physionet.org/content/mimic-eicu-fiddle-feature/1.0.0/
-
-(2) **MIMIC-III original publication:**
+(1) **MIMIC-III original publication:**
 Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. Scientific Data, 3, 160035.
 **MIMIC-III Database:**
 Johnson, A., Pollard, T., & Mark, R. (2016). MIMIC-III Clinical Database (version 1.4). PhysioNet. https://doi.org/10.13026/C2XW26.
+
+(2)**FIDDLE Publication Source:**
+ https://academic.oup.com/jamia/article/27/12/1921/5920826
+**FIDDLE Preprocessed Data Source:**
+https://physionet.org/content/mimic-eicu-fiddle-feature/1.0.0/
 
 
 **Standard Physionet Citation**
