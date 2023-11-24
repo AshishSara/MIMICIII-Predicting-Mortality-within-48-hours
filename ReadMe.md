@@ -45,7 +45,7 @@ Use in Clinical Settings: Such models, if deployed in clinical settings, can ass
 
 **Reference:**
 
-(1) **MIMIC-III Publication Citation:**
+(1) **MIMIC-III Database Publication Citation:**
 Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. Scientific Data, 3, 160035.
 
 **MIMIC-III Database Source:**
