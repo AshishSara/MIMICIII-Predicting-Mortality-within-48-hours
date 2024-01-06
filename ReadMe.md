@@ -1,32 +1,52 @@
-This project aims to predict whether a patient will experience mortality (death) within 48 hours of their hospital admission or at some point during their ICU stay, based on the data available in their electronic health records (EHR) up to that time. The original EHR data used for this project is from MIMIC-III (linked below in the reference list) (1). This project uses the preprocessed data obtained from applying the FIDDLE protocol (2). Please see the reference section for the citation and a link to the description of the protocol. I have provided a brief summary of the preprocessed data below, but to confirm, the preprocessed data strategy is directly from the FIDDLE protocol and I claim no credit for the preprocessing strategy (2). 
+This project aims to predict whether a patient will experience mortality (death) within 48 hours of their hospital admission,
+based on the data available in their electronic health records up to that time. 
+This project uses the preprocessed data obtained from applying the FIDDLE protocol (1). Please see the reference section for the citation
+and a link to the description of the protocol. I have provided a brief summary of the preprocessed data below, but to confirm, 
+the preprocessed data strategy is directly from the FIDDLE protocol and I claim no credit for the preprocessing strategy (1). 
 
-Data: The protocol obtained data from MIMIC-III (1) dataset and focused on 17,710 patients (23,620 ICU visits) monitored 
+Data: The protocol obtained data from MIMIC-III dataset and focused on 17,710 patients (23,620 ICU visits) monitored 
 using the iMDSoft MetaVision system (2008–2012) for its relative recency over the Philips CareVue system (2001–2008), 
-thus representing more up-to-date clinical practices (2). Each ICU visit is identified by a unique ICUSTAY_ID (2).
+thus representing more up-to-date clinical practices (1). Each ICU visit is identified by a unique ICUSTAY_ID (1).
 
 
-**Extracted data from the following tables provided from the MIMIC III datset (1,2):**
+**Extracted data from the following tables provided from the MIMIC III datset (1):**
 
 PATIENTS, ADMISSIONS, ICUSTAYS, CHARTEVENTS, LABEVENTS, INPUTEVENTS_MV, OUTPUTEVENTS, PROCEDUREEVENT_MV, MICROBIOLOGYEVENTS, DATETIMEEVENTS
 
-
-**Preprocessing (2):**
+**Preprocessing (1):**
 The data was then formatted into a table with 4 columns: [ID, t, variable_name, variable_value] and then applied FIDDLE 
 (using the default settings) on the processed data tables for the prediction tasks to convert them into the required 
 feature matrices.
 
 
-**Cohort Numbers and Dimensionalities of Extracted Features are Summarised Below:**
+**Cohort Numbers and Dimensionalities of Extracted Features are Summairzed Below:**
+
 
 - Number of Instances (N): 8,577 ICU stays.
 
 - Number of Time-Invariant Features (d): 96.
+  - This is the dimension of the feature set that remains constant over time for each patient.
 
 - Number of Time-Dependent Features (D): 7,307.
+  - This represents the number of features that can change over time for each patient.
 
 
-Features Used (D): The dataset includes high-dimensional feature representations (up to ~7,500 features), encompassing a wide 
-range of clinical data such as vital signs, lab results, treatment information, and other relevant patient metrics.
+Time-invariant Features (s):
+s.npz: A sparse matrix of time-invariant features (N×d dimensions).
+A sparse matrix is a matrix in which most of the elements are zero. In the context of your dataset:
+Contains time-invariant features in a sparse matrix format. Time-invariant features are those characteristics 
+that do not change over time during the patient's stay in the ICU (e.g., age, gender, pre-existing conditions).
+
+s.feature_names.json: Names of these features.
+s.feature_aliases.json: Alias mapping for these features.
+An alias in this context is an alternative name or identifier for a feature. This is particularly useful when a feature 
+might be known by different names or codes across various datasets or within different healthcare systems.
+
+Time-dependent Features (X):
+X.npz: A sparse tensor of time-dependent features (N×L×D dimensions).
+X.feature_names.json: Names of these features.
+X.feature_aliases.json: Alias mapping for these features.
+
 
 Output of the Models: The models output a binary prediction:
 
@@ -36,7 +56,7 @@ Clinical Significance: This prediction is crucial in a healthcare setting as it 
 high risk and might require more intensive care or intervention.
 
 Implications:
-Model Performance: In this context, it's particularly important to focus not just on overall accuracy but also on the model's ability to correctly identify high-risk patients (Class 1). This is why metrics like recall, precision, ROC AUC, and F1-score for the mortality class are essential.
+Model Performance: In this context, it's particularly important to focus not just on overall accuracy but also on the model's ability to correctly identify the high-risk patients (Class 1). This is why metrics like recall, precision, ROC AUC, and F1-score for the mortality class are essential.
 
 Model Interpretation: The feature importance analysis from these models can provide insights into which factors are most predictive of near-term mortality, helping clinicians understand key risk factors.
 
